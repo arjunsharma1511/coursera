@@ -45,8 +45,8 @@ sidenav.innerHTML +=
   <ul class="navbar-nav text-light" id="accordionSidebar">
     <li class="nav-item"><a class="nav-link nav-home" href="index.html"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
     <li class="nav-item"><a class="nav-link nav-profile" href="profile.html"><i class="fas fa-user"></i><span>Profile</span></a></li>
-    <li class="nav-item"><a class="nav-link nav-projects" href="project.html"><i class="fas fa-table"></i><span>Projects</span></a></li>
-    <li class="nav-item"><a class="nav-link nav-" href="register.html"><i class="fas fa-user-circle"></i><span>Register</span></a></li>
+    <li class="nav-item"><a class="nav-link nav-projects" href="project.html"><i class="fas fa-tachometer-alt"></i><span>Projects</span></a></li>
+    <li class="nav-item"><a class="nav-link nav-" href="schedule.html"><i class="fas fa-table"></i><span>Schedule</span></a></li>
     <div class="dropdown nav-item">
       <a class="dropdown-toggle nav-link" data-bs-toggle="dropdown" aria-expanded="false">
         Workshops
