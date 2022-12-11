@@ -22,7 +22,7 @@ sidenav.innerHTML =`
                 <ul class="navbar-nav text-light" id="accordionSidebar">
                     <li class="nav-item"><a class="nav-link active" href="index.html"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="profile.html"><i class="fas fa-user"></i><span>Profile</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="table.html"><i class="fas fa-table"></i><span>Table</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="project.html"><i class="fas fa-table"></i><span>Projects</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="login.html"><i class="far fa-user-circle"></i><span>Login</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="register.html"><i class="fas fa-user-circle"></i><span>Register</span></a></li>
                     <!-- <li class="nav-item"><a class="nav-link" href="register.html"><i class="fas fa-user-circle"></i><span>Workshops</span></a></li> -->
@@ -31,8 +31,8 @@ sidenav.innerHTML =`
                           Workshops
                         </a>
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">My workshops</a></li>
-                          <li><a class="dropdown-item" href="#">All workshops</a></li>
+                          <li><a class="dropdown-item" href="workshop.html">My workshops</a></li>
+                          <li><a class="dropdown-item" href="all_workshops.html">All workshops</a></li>
                         </ul>
                       </div>
                 </ul>
