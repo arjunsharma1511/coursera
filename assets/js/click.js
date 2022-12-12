@@ -32,6 +32,14 @@ document.onkeydown = function(e) {
         return true;
     }
 }
+// disable ctrl+shift+i
+document.onkeydown = function(e) {
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+        return false;
+    } else {
+        return true;
+    }
+}
 // disable ctrl+shift+u
 document.onkeydown = function(e) {
     if (e.ctrlKey && e.shiftKey && e.keyCode == 'U'.charCodeAt(0)) {
@@ -96,9 +104,19 @@ document.onkeydown = function(e) {
         return true;
     }
 }
+
 // disable ctrl+u
 document.onkeydown = function(e) {
     if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+// disable ctrl+s
+document.onkeydown = function(e) {
+    if (e.ctrlKey && e.keyCode == 'S'.charCodeAt(0)) {
         return false;
     } else {
         return true;
