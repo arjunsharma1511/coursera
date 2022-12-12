@@ -1,4 +1,6 @@
 var topbar = document.querySelector('.topbar');
+var content = document.querySelector('#content');
+content.classList.add('bg-dark')
 topbar.innerHTML += 
 `
 <div class="container-fluid">
