@@ -45,11 +45,12 @@ sidenav.innerHTML +=
   <ul class="navbar-nav text-light" id="accordionSidebar">
     <li class="nav-item"><a class="nav-link nav-home" href="index.html"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
     <li class="nav-item"><a class="nav-link nav-profile" href="profile.html"><i class="fas fa-user"></i><span>Profile</span></a></li>
-    <li class="nav-item"><a class="nav-link nav-projects" href="project.html"><i class="fas fa-tachometer-alt"></i><span>Projects</span></a></li>
-    <li class="nav-item"><a class="nav-link nav-" href="schedule.html"><i class="fas fa-table"></i><span>Schedule</span></a></li>
-    <div class="dropdown nav-item">
-      <a class="dropdown-toggle nav-link" data-bs-toggle="dropdown" aria-expanded="false">
-        Workshops
+    <li class="nav-item"><a class="nav-link nav-project" href="project.html"><i class="fas fa-tachometer-alt"></i><span>Projects</span></a></li>
+    <li class="nav-item"><a class="nav-link nav-schedule" href="schedule.html"><i class="fas fa-table"></i><span>Schedule</span></a></li>
+    <div class="dropdown no-arrow nav-item">
+      <a class="dropdown-toggle nav-link nav-workshop" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fas fa-laptop"></i>
+        <span>Workshops</span>
       </a>
       <ul class="dropdown-menu p-0 m-0 position-absolute top-0" style="left: 105px;background: var(--sidebar-color);">
         <li><a class="dropdown-item text-light" href="workshop.html">My workshops</a></li>
