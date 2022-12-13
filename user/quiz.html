@@ -262,7 +262,7 @@
                     }
                 </style>
                 <div class="container mt-sm-5 my-1">
-                    <div class="question ml-sm-5 pl-sm-5 pt-2 ">
+                    <div class="question ml-sm-5 pl-sm-5 pt-2">
                         <div class="py-2 h5"><b>Q1. which option best describes your job role?</b></div>
                         <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" id="options">
                             <label class="options">Small Business Owner or Employee
@@ -288,7 +288,7 @@
                         </div>
                     </div>
                     <div class="question ml-sm-5 pl-sm-5 pt-2 ">
-                        <div class="py-2 h5"><b>Q1. which option best describes your job role?</b></div>
+                        <div class="py-2 h5"><b>Q2. which option best describes your job role?</b></div>
                         <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" id="options">
                             <label class="options">Small Business Owner or Employee
                                 <input type="radio" name="radio">
@@ -313,7 +313,7 @@
                         </div>
                     </div>
                     <div class="question ml-sm-5 pl-sm-5 pt-2 ">
-                        <div class="py-2 h5"><b>Q1. which option best describes your job role?</b></div>
+                        <div class="py-2 h5"><b>Q3. which option best describes your job role?</b></div>
                         <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" id="options">
                             <label class="options">Small Business Owner or Employee
                                 <input type="radio" name="radio">
@@ -338,7 +338,7 @@
                         </div>
                     </div>
                     <div class="question ml-sm-5 pl-sm-5 pt-2 ">
-                        <div class="py-2 h5"><b>Q1. which option best describes your job role?</b></div>
+                        <div class="py-2 h5"><b>Q4. which option best describes your job role?</b></div>
                         <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" id="options">
                             <label class="options">Small Business Owner or Employee
                                 <input type="radio" name="radio">
@@ -459,11 +459,68 @@
                 time--;
                 if (time < 0) {
                     clearInterval(interval);
-                    timer.innerHTML = 'Done';
-                    // or...
-                    alert('Done!');
+                    Swal.fire({
+                        title: 'Time Up!',
+                        text: 'You have run out of time',
+                        icon: 'error',
+                        confirmButtonText: 'Ok'
+                    });
                 }
             }, 1000);
+
+            // change the question claslist on next and prev btn clicks
+            var nextBtn = document.querySelector('.next');
+            var prevBtn = document.querySelector('.prev');
+
+            // select all question class div
+            var questions = document.querySelectorAll('.question');
+            var questionIndex = 0;
+
+            // hide all questions
+            questions.forEach(function(question) {
+                question.classList.add('visually-hidden');
+            });
+
+            // show the first question
+            questions[questionIndex].classList.remove('visually-hidden');   
+
+            // add event listener to next btn
+            nextBtn.addEventListener('click', function() {
+                // hide the current question
+                questions[questionIndex].classList.add('visually-hidden');
+
+                // increment the question index
+                questionIndex++;
+
+                // show the next question
+                questions[questionIndex].classList.remove('visually-hidden');
+
+                // if noquestion is left to show, hide the next btn
+            if (questionIndex === questions.length - 1) {
+                nextBtn.classList.add('invisible');
+                // stop timer
+                clearInterval(interval);
+            }
+            });
+
+            // add event listener to prev btn
+            prevBtn.addEventListener('click', function() {
+                // hide the current question
+                questions[questionIndex].classList.add('visually-hidden');
+
+                // decrement the question index
+                questionIndex--;
+
+                // show the prev question
+                questions[questionIndex].classList.remove('visually-hidden');
+
+                // if next button hidden, show nextt button
+                if (nextBtn.classList.contains('invisible')) {
+                    nextBtn.classList.remove('invisible');
+                }
+            });
+
+            
         </script>
 </body>
 
