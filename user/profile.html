@@ -122,6 +122,16 @@
         document.querySelector('.nav-profile').classList.add('active')
     </script>
 
+    <script>
+        // get the unique id from cache and compare to the generated id
+        const id = localStorage.getItem('id')
+        const generatedId = document.querySelector('.generated-id').value
+        if (id !== generatedId) {
+            // if the id is not equal to the generated id then redirect to the login page
+            window.location.href = '../login.html'
+        }
+    </script>
+
 </body>
 
 </html>

@@ -56,6 +56,7 @@
     <script src="assets/js/navbar.js"></script>
     <script src="assets/js/footer.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/bold-and-dark.js"></script>
     <script src="assets/js/click.js"></script>
@@ -65,12 +66,39 @@
             var email = document.getElementById("email").value;
             var password = document.getElementById("password").value;
             if (email == "arjun@gmail.com" && password == "yuuyu") {
-                window.location = "user/profile.html"; // Redirecting to other page.
-                alert("Login successfully");
+                setID(); // call the function to set a unique id
+                // window.location = "user/profile.html"; // Redirecting to other page.
+                Swal.fire({
+                    title: 'Login Successful',
+                    icon: 'success',
+                    showCancelButton: false,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'OK'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location = "user/profile.html";
+                    }
+                });
                 return false;
             } else {
-                alert("Invalid username or password");
+                Swal.fire({
+                    title: 'Login Failed',
+                    text: 'Please check',
+                    icon: 'error',
+                    showCancelButton: false,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'OK'
+                });
             }
+        }
+
+        // create a function to set a unique id and store it in the local storage
+        function setID() {
+            var id = Math.floor(Math.random() * 1000000000);
+            localStorage.setItem("id", id);
+            console.log(id)
         }
     </script>
 </body>
