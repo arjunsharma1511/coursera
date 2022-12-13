@@ -482,7 +482,12 @@
             });
 
             // show the first question
-            questions[questionIndex].classList.remove('visually-hidden');   
+            questions[questionIndex].classList.remove('visually-hidden');  
+            
+            // if first question, hide prev btn
+            if (questionIndex === 0) {
+                prevBtn.classList.add('invisible');
+            }
 
             // add event listener to next btn
             nextBtn.addEventListener('click', function() {
@@ -501,6 +506,13 @@
                 // stop timer
                 clearInterval(interval);
             }
+            if (questionIndex !== 0) {
+                prevBtn.classList.remove('invisible');
+            }
+            // if last question, hide next btn
+            if (questionIndex === questions.length - 1) {
+                nextBtn.classList.add('invisible');
+            }
             });
 
             // add event listener to prev btn
@@ -518,6 +530,9 @@
                 if (nextBtn.classList.contains('invisible')) {
                     nextBtn.classList.remove('invisible');
                 }
+                if (questionIndex === 0) {
+                prevBtn.classList.add('invisible');
+            }
             });
 
             
