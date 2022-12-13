@@ -5,8 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Dashboard - Brand</title>
+    <link rel="shortcut icon" href="../assets/icon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
 </head>
 
@@ -29,7 +31,8 @@
                                 <div class="card-body">
                                     <div class="row align-items-center no-gutters">
                                         <div class="col mr-2">
-                                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>Questions</span></div>
+                                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1">
+                                                <span>Questions</span></div>
                                             <div class="text-dark font-weight-bold h5 mb-0"><span>1</span></div>
                                         </div>
                                         <div class="col-auto"><i class="fas fa-question fa-2x text-gray-300"></i></div>
@@ -42,7 +45,8 @@
                                 <div class="card-body">
                                     <div class="row align-items-center no-gutters">
                                         <div class="col mr-2">
-                                            <div class="text-uppercase text-success font-weight-bold text-xs mb-1"><span>Correct</span></div>
+                                            <div class="text-uppercase text-success font-weight-bold text-xs mb-1">
+                                                <span>Correct</span></div>
                                             <div class="text-dark font-weight-bold h5 mb-0"><span>0</span></div>
                                         </div>
                                         <div class="col-auto"><i class="fas fa-check fa-2x text-gray-300"></i></div>
@@ -55,7 +59,8 @@
                                 <div class="card-body">
                                     <div class="row align-items-center no-gutters">
                                         <div class="col mr-2">
-                                            <div class="text-uppercase text-warning font-weight-bold text-xs mb-1"><span>Incorrect</span></div>
+                                            <div class="text-uppercase text-warning font-weight-bold text-xs mb-1">
+                                                <span>Incorrect</span></div>
                                             <div class="text-dark font-weight-bold h5 mb-0"><span>0</span></div>
                                         </div>
                                         <div class="col-auto"><i class="fas fa-times fa-2x text-gray-300"></i></div>
@@ -68,7 +73,8 @@
                                 <div class="card-body">
                                     <div class="row align-items-center no-gutters">
                                         <div class="col mr-2">
-                                            <div class="text-uppercase text-danger font-weight-bold text-xs mb-1"><span>Skipped</span></div>
+                                            <div class="text-uppercase text-danger font-weight-bold text-xs mb-1">
+                                                <span>Skipped</span></div>
                                             <div class="text-dark font-weight-bold h5 mb-0"><span>0</span></div>
                                         </div>
                                         <div class="col-auto"><i class="fas fa-times fa-2x text-gray-300"></i></div>
@@ -77,146 +83,201 @@
                             </div>
                         </div>
                     </div>
-    <style>
+                    <style>
+                        * {
+                            margin: 0;
+                            padding: 0;
+                            box-sizing: border-box;
+                        }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+                        body {
+                            background-color: #333;
+                        }
 
-body{
-    background-color: #333;
-}
-.container{
-    background-color: rgb(47, 46, 46);
-    color: #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    font-family: 'Montserrat', sans-serif;
-    max-width: 700px;
-}
-.container > p{
-    font-size: 32px;
-}
-.question{
-    width: 75%;
-}
-.options{
-    position: relative;
-    padding-left: 40px;
-}
-#options label{
-    display: block;
-    margin-bottom: 15px;
-    font-size: 14px;
-    cursor: pointer;
-}
-.options input{
-    opacity: 0;
-}
-.checkmark {
-    position: absolute;
-    top: -1px;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #555;
-    border: 1px solid #ddd;
-    border-radius: 50%;
-}
-.options input:checked ~ .checkmark:after {
-    display: block;
-}
-.options .checkmark:after{
-    content: "";
-	width: 10px;
-    height: 10px;
-    display: block;
-	background: white;
-    position: absolute;
-    top: 50%;
-	left: 50%;
-    border-radius: 50%;
-    transform: translate(-50%,-50%) scale(0);
-    transition: 300ms ease-in-out 0s;
-}
-.options input[type="radio"]:checked ~ .checkmark{
-    background: #21bf73;
-    transition: 300ms ease-in-out 0s;
-}
-.options input[type="radio"]:checked ~ .checkmark:after{
-    transform: translate(-50%,-50%) scale(1);
-}
-.btn-primary{
-    background-color: #555;
-    color: #ddd;
-    border: 1px solid #ddd;
-}
-.btn-primary:hover{
-    background-color: #21bf73;
-    border: 1px solid #21bf73;
-}
-.btn-success{
-    padding: 5px 25px;
-    background-color: #21bf73;
-}
-@media(max-width:576px){
-    .question{
-        width: 100%;
-        word-spacing: 2px;
-    } 
-}
-     </style>
-                    <div class="container mt-sm-5 my-1">
-                        <div class="question ml-sm-5 pl-sm-5 pt-2">
-                            <div class="py-2 h5"><b>Q1. which option best describes your job role?</b></div>
-                            <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" id="options">
-                                <label class="options">Small Business Owner or Employee
-                                    <input type="radio" name="radio">
-                                    <span class="checkmark"></span>
-                                </label><br>
-                                <label class="options">Nonprofit Owner or Employee
-                                    <input type="radio" name="radio">
-                                    <span class="checkmark"></span>
-                                </label><br>
-                                <label class="options">Journalist or Activist
-                                    <input type="radio" name="radio">
-                                    <span class="checkmark"></span>
-                                </label><br>
-                                <label class="options">Other
-                                    <input type="radio" name="radio">
-                                    <span class="checkmark"></span>
-                                </label><br>
-                            </div>
-                        <div class="d-flex align-items-center pt-3">
-                            <div id="prev">
+                        .container {
+                            background-color: rgb(47, 46, 46);
+                            color: #ddd;
+                            border-radius: 10px;
+                            padding: 20px;
+                            font-family: 'Montserrat', sans-serif;
+                            max-width: 700px;
+                        }
+
+                        .container>p {
+                            font-size: 32px;
+                        }
+
+                        .question {
+                            width: 75%;
+                        }
+
+                        .options {
+                            position: relative;
+                            padding-left: 40px;
+                        }
+
+                        #options label {
+                            display: block;
+                            margin-bottom: 15px;
+                            font-size: 14px;
+                            cursor: pointer;
+                        }
+
+                        .options input {
+                            opacity: 0;
+                        }
+
+                        .checkmark {
+                            position: absolute;
+                            top: -1px;
+                            left: 0;
+                            height: 25px;
+                            width: 25px;
+                            background-color: #555;
+                            border: 1px solid #ddd;
+                            border-radius: 50%;
+                        }
+
+                        .options input:checked~.checkmark:after {
+                            display: block;
+                        }
+
+                        .options .checkmark:after {
+                            content: "";
+                            width: 10px;
+                            height: 10px;
+                            display: block;
+                            background: white;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            border-radius: 50%;
+                            transform: translate(-50%, -50%) scale(0);
+                            transition: 300ms ease-in-out 0s;
+                        }
+
+                        .options input[type="radio"]:checked~.checkmark {
+                            background: #21bf73;
+                            transition: 300ms ease-in-out 0s;
+                        }
+
+                        .options input[type="radio"]:checked~.checkmark:after {
+                            transform: translate(-50%, -50%) scale(1);
+                        }
+
+                        .btn-primary {
+                            background-color: #555;
+                            color: #ddd;
+                            border: 1px solid #ddd;
+                        }
+
+                        .btn-primary:hover {
+                            background-color: #21bf73;
+                            border: 1px solid #21bf73;
+                        }
+
+                        .btn-success {
+                            padding: 5px 25px;
+                            background-color: #21bf73;
+                        }
+
+                        @media(max-width:576px) {
+                            .question {
+                                width: 100%;
+                                word-spacing: 2px;
+                            }
+                        }
+                    </style>
+                </div>
+
+                <!-- create a carousel questions card -->
+                <div class="container mt-sm-5 my-1 visually-hidden">
+                    <div class="carousel">
+                        
+                    </div>
+                    <div class="question ml-sm-5 pl-sm-5 pt-2">
+                        <div class="py-2 h5"><b>Q1. which option best describes your job role?</b></div>
+                        <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" id="options">
+                            <label class="options">Small Business Owner or Employee
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label><br>
+                            <label class="options">Nonprofit Owner or Employee
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label><br>
+                            <label class="options">Journalist or Activist
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label><br>
+                            <label class="options">Student
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label><br>
+                            <label class="options">Other
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label><br>
+                        </div>
+                    </div>
+                    <div class="container mt-3">
+                        <button class="btn btn-primary btn-sm">Previous</button>
+                        <button class="btn btn-primary btn-sm text-center">Next</button>
+                        <button class="btn btn-success btn-sm">Submit</button>
+                    </div>
+                <div class="container mt-sm-5 my-1 visually-hidden">
+                    <div class="carousel">
+                        
+                    </div>
+                    <div class="question ml-sm-5 pl-sm-5 pt-2">
+                        <div class="py-2 h5"><b>Q1. which option best describes your job role?</b></div>
+                        <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" id="options">
+                            <label class="options">Small Business Owner or Employee
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label><br>
+                            <label class="options">Nonprofit Owner or Employee
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label><br>
+                            <label class="options">Journalist or Activist
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label><br>
+                            <label class="options">Other
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label><br>
+                        </div>
+                        <div class="row align-items-center pt-3 justify-content-around">
+                            <div id="col-md">
                                 <button class="btn btn-primary">Previous</button>
                             </div>
-                            <div class="ml-auto mr-sm-5">
+                            <div class="col-md">
                                 <button class="btn btn-success">Next</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <footer class="sticky-footer"></footer>
-        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
-    </div>
-    <script src="assets/js/topnav.js"></script>
-    <script src="assets/js/sidenav.js"></script>
-    <script src="assets/js/footer.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
-    <script src="assets/js/bs-init.js"></script>
-    <script src="assets/js/theme.js"></script>
+            
+        </div>
+        <footer class="sticky-footer"></footer>
+        <a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+        <script src="assets/js/topnav.js"></script>
+        <script src="assets/js/sidenav.js"></script>
+        <script src="assets/js/footer.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+        <script src="assets/js/bs-init.js"></script>
+        <script src="assets/js/theme.js"></script>
 
-    <script src="../assets/js/click.js"></script>
-    <script src="assets/js/main.js"></script>
+        <script src="../assets/js/click.js"></script>
+        <script src="assets/js/main.js"></script>
 
-    <script>
-        document.querySelector('.nav-home').classList.add('active')
-    </script>
+        <script>
+            document.querySelector('.nav-home').classList.add('active')
+        </script>
 </body>
 
 </html>
