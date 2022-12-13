@@ -3,6 +3,9 @@ var content = document.querySelector('#content');
 content.classList.add('bg-dark')
 topbar.innerHTML += 
 `
+<style>
+div, p, span {color: #fff;}
+</style>
 <div class="container-fluid">
     <button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button">
         <i class="fas fa-bars"></i>

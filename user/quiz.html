@@ -18,7 +18,7 @@
         <nav class="sidebar"></nav>
 
         <div class="d-flex flex-column" id="content-wrapper">
-            <div id="content">
+        <div id="content">
                 <!-- topbar -->
                 <nav class="navbar navbar-light navbar-expand shadow mb-4 topbar static-top"></nav>
                 <div class="container-fluid">
@@ -191,11 +191,78 @@
                 </div>
 
                 <!-- create a carousel questions card -->
-                <div class="container mt-sm-5 my-1 visually-hidden">
-                    <div class="carousel">
-                        
-                    </div>
-                    <div class="question ml-sm-5 pl-sm-5 pt-2">
+                <style>
+                    .question {
+                        width: 75%;
+                    }
+                    .question .options {
+                        position: relative;
+                        padding-left: 40px;
+                    }
+                    .question #options label {
+                        display: block;
+                        margin-bottom: 15px;
+                        font-size: 14px;
+                        cursor: pointer;
+                    }
+                    .question .options input {
+                        opacity: 0;
+                    }
+                    .question .checkmark {
+                        position: absolute;
+                        top: -1px;
+                        left: 0;
+                        height: 25px;
+                        width: 25px;
+                        background-color: #555;
+                        border: 1px solid #ddd;
+                        border-radius: 50%;
+                    }
+                    .question .options input:checked~.checkmark:after {
+                        display: block;
+                    }
+                    .question .options .checkmark:after {
+                        content: "";
+                        width: 10px;
+                        height: 10px;
+                        display: block;
+                        background: white;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        border-radius: 50%;
+                        transform: translate(-50%, -50%) scale(0);
+                        transition: 300ms ease-in-out 0s;
+                    }
+                    .question .options input[type="radio"]:checked~.checkmark {
+                        background: #21bf73;
+                        transition: 300ms ease-in-out 0s;
+                    }
+                    .question .options input[type="radio"]:checked~.checkmark:after {
+                        transform: translate(-50%, -50%) scale(1);
+                    }
+                    .question .btn-primary {
+                        background-color: #555;
+                        color: #ddd;
+                        border: 1px solid #ddd;
+                    }
+                    .question .btn-primary:hover {
+                        background-color: #21bf73;
+                        border: 1px solid #21bf73;
+                    }
+                    .question .btn-success {
+                        padding: 5px 25px;
+                        background-color: #21bf73;
+                    }
+                    @media(max-width:576px) {
+                        .question {
+                            width: 100%;
+                            word-spacing: 2px;
+                        }
+                    }
+                </style>
+                <div class="container mt-sm-5 my-1">
+                    <div class="question ml-sm-5 pl-sm-5 pt-2 ">
                         <div class="py-2 h5"><b>Q1. which option best describes your job role?</b></div>
                         <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" id="options">
                             <label class="options">Small Business Owner or Employee
@@ -220,10 +287,112 @@
                             </label><br>
                         </div>
                     </div>
-                    <div class="container mt-3">
-                        <button class="btn btn-primary btn-sm">Previous</button>
-                        <button class="btn btn-primary btn-sm text-center">Next</button>
-                        <button class="btn btn-success btn-sm">Submit</button>
+                    <div class="question ml-sm-5 pl-sm-5 pt-2 ">
+                        <div class="py-2 h5"><b>Q1. which option best describes your job role?</b></div>
+                        <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" id="options">
+                            <label class="options">Small Business Owner or Employee
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label><br>
+                            <label class="options">Nonprofit Owner or Employee
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label><br>
+                            <label class="options">Journalist or Activist
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label><br>
+                            <label class="options">Student
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label><br>
+                            <label class="options">Other
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label><br>
+                        </div>
+                    </div>
+                    <div class="question ml-sm-5 pl-sm-5 pt-2 ">
+                        <div class="py-2 h5"><b>Q1. which option best describes your job role?</b></div>
+                        <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" id="options">
+                            <label class="options">Small Business Owner or Employee
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label><br>
+                            <label class="options">Nonprofit Owner or Employee
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label><br>
+                            <label class="options">Journalist or Activist
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label><br>
+                            <label class="options">Student
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label><br>
+                            <label class="options">Other
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label><br>
+                        </div>
+                    </div>
+                    <div class="question ml-sm-5 pl-sm-5 pt-2 ">
+                        <div class="py-2 h5"><b>Q1. which option best describes your job role?</b></div>
+                        <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" id="options">
+                            <label class="options">Small Business Owner or Employee
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label><br>
+                            <label class="options">Nonprofit Owner or Employee
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label><br>
+                            <label class="options">Journalist or Activist
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label><br>
+                            <label class="options">Student
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label><br>
+                            <label class="options">Other
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label><br>
+                        </div>
+                    </div>
+                    <style>
+                        .quiz-controls {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                        }
+                        .quiz-controls .timer {
+                            font-size: 20px;
+                            font-weight: 600;
+                        }
+                        .quiz-controls .prev {
+                            padding: 5px 25px;
+                        }
+                        .quiz-controls .next {
+                            padding: 5px 25px;
+                        }
+                        .quiz-controls .next:hover {
+                            background-color: #21bf73;
+                            border: 1px solid #21bf73;
+                        }
+                        .quiz-controls .prev:hover {
+                            background-color: #21bf73;
+                            border: 1px solid #21bf73;
+                        }
+                    </style>
+                    <div class="container mt-3 quiz-controls">
+                        <button class="btn btn-primary btn-sm prev">Previous</button>
+                        <span>
+                            <span class="timer"></span>
+                        </span>
+                        <button class="btn btn-primary btn-sm text-center next">Next</button>
                     </div>
                 <div class="container mt-sm-5 my-1 visually-hidden">
                     <div class="carousel">
@@ -277,6 +446,24 @@
 
         <script>
             document.querySelector('.nav-home').classList.add('active')
+        </script>
+        <script>
+            var timer = document.querySelector('.timer');
+            // auto decrement time from 30:00 to 00:00
+            var time = 30 * 60;
+            var interval = setInterval(function() {
+                var minutes = Math.floor(time / 60);
+                var seconds = time % 60;
+                seconds = seconds < 10 ? '0' + seconds : seconds;
+                timer.innerHTML = minutes + ':' + seconds;
+                time--;
+                if (time < 0) {
+                    clearInterval(interval);
+                    timer.innerHTML = 'Done';
+                    // or...
+                    alert('Done!');
+                }
+            }, 1000);
         </script>
 </body>
 
