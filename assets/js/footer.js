@@ -17,7 +17,7 @@ footer.innerHTML+=
             <h3 class="fs-6 text-secondary">About</h3>
             <ul class="list-unstyled">
                 <li><a class="link-light" href="#">Company</a></li>
-                <li><a class="link-light" href="#">Team</a></li>
+                <li><a class="link-light" href="team.html">Team</a></li>
                 <li><a class="link-light" href="#">Legacy</a></li>
             </ul>
         </div><!-- End: About -->

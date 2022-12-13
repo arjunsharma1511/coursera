@@ -1,4 +1,5 @@
 var navbar = document.querySelector('nav');
+navbar.style.background = "#27262e"
 
 navbar.innerHTML+=
 `
@@ -14,11 +15,11 @@ navbar.innerHTML+=
 </button>
     <div class="collapse navbar-collapse" id="navcol-2">
         <ul class="navbar-nav mx-auto">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-            <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
-            <li class="nav-item"><a class="nav-link active" href="contacts.html">Contacts</a></li>
+            <li class="nav-item"><a class="nav-link nav-home" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link nav-services" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link nav-projects" href="projects.html">Projects</a></li>
+            <li class="nav-item"><a class="nav-link nav-pricing" href="pricing.html">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link nav-contact" href="contacts.html">Contacts</a></li>
         </ul><a class="nav-link" href="login.html"><button class="btn btn-primary" type="button">Login</button></a>
     </div>
 </div>
