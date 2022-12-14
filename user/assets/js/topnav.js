@@ -5,6 +5,13 @@ topbar.innerHTML +=
 `
 <style>
 div, p, span {color: #fff;}
+::-webkit-scrollbar {
+    display: none;
+}
+body {
+    user-select: none;
+    --webkit-user-select: none;
+}
 </style>
 <div class="container-fluid">
     <button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button">

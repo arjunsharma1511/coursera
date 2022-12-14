@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Dashboard - Brand</title>
+    <title>QUIZ SECTION - Webex</title>
     <link rel="shortcut icon" href="../assets/icon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet"
@@ -760,6 +760,16 @@
                             </label><br>
                         </div>
                     </div>
+                    <!-- submit card -->
+                    <div class="card submit-card">
+                        <div class="card-body" style="background: #2f2e2e">
+                            <div class="row align-content-center p-4">
+                                <div class="col text-center">
+                                    <button type="button" role="button" class="btn btn-success btn-sm submit-score-btn">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <style>
                         .quiz-controls {
                             display: flex;
@@ -827,13 +837,13 @@
                     </div>
                 </div>
             </div>
-            
         </div>
         <footer class="sticky-footer"></footer>
         <a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
         <script src="assets/js/topnav.js"></script>
         <script src="assets/js/sidenav.js"></script>
         <script src="assets/js/footer.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
         <script src="assets/js/bs-init.js"></script>
@@ -846,9 +856,11 @@
             document.querySelector('.nav-home').classList.add('active')
         </script>
         <script>
+            const submitCard = document.querySelector('.submit-card');
+            const submitBtn = document.querySelector('.submit-score-btn');
             var timer = document.querySelector('.timer');
-            // auto decrement time from 30:00 to 00:00
-            var time = 25 * 60;
+            // auto decrement time from 15:00 to 00:00
+            var time = 900;
             var interval = setInterval(function() {
                 var minutes = Math.floor(time / 60);
                 var seconds = time % 60;
@@ -887,12 +899,6 @@
                 prevBtn.classList.add('invisible');
             }
 
-            // if last question, show submit btn
-            if (questionIndex === questions.length - 1) {
-                nextBtn.classList.add('invisible');
-            }
-
-
             // add event listener to next btn
             nextBtn.addEventListener('click', function() {
                 // hide the current question
@@ -904,19 +910,18 @@
                 // show the next question
                 questions[questionIndex].classList.remove('visually-hidden');
 
-                // if noquestion is left to show, hide the next btn
-            if (questionIndex === questions.length - 1) {
-                nextBtn.classList.add('invisible');
-                // stop timer
-                clearInterval(interval);
-            }
             if (questionIndex !== 0) {
                 prevBtn.classList.remove('invisible');
             }
             // if last question, hide next btn
             if (questionIndex === questions.length - 1) {
+                clearInterval(interval);
                 nextBtn.classList.add('invisible');
+                prevBtn.classList.add('invisible');
+                submitCard.classList.remove('visually-hidden');
             }
+
+
             });
 
             // add event listener to prev btn
@@ -939,7 +944,20 @@
             }
             });
 
-            
+            // add event listener to submit btn
+            submitBtn.addEventListener('click',function(){
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Your score has been submitted',
+                    showConfirmButton: false,
+                    timer: 1500,
+                    background: '#2f2e2e'
+                })
+                .then((result)=> {
+                    window.location.href = 'profile.html';
+                    return false;
+                }); 
+            })
         </script>
 </body>
 
