@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Dashboard - Brand</title>
+    <link rel="shortcut icon" href="../assets/icon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+</head>
+
+<body id="page-top bg-black" style="background: var(--bg-1) !important;">
+    <div id="wrapper">
+        <!-- sidebar -->
+        <nav class="sidebar"></nav>
+
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <!-- topbar -->
+                <nav class="navbar navbar-light navbar-expand shadow mb-4 topbar static-top"></nav>
+                
+                <div class="container-fluid">
+                    <!-- enter your email -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="text-primary fw-bold m-0">Enter your email</h6>
+                                </div>
+                                <div class="card-body">
+                                    <form>
+                                        <div class="mb-3 text-center">
+                                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                            <!--submit button redirect to mailsent.html -->
+                                            
+
+                                            <button type="button" class="btn btn-primary" onclick="window.location.href='mailsent.html';">Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <footer class="sticky-footer"></footer>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+    <script src="assets/js/topnav.js"></script>
+    <script src="assets/js/sidenav.js"></script>
+    <script src="assets/js/footer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/theme.js"></script>
+
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        document.querySelector('.nav-workshop').classList.add('active')
+    </script>
+    <script>
+      const items = document.querySelectorAll('[idx] .item')
+      items.forEach((item, idx) => {
+        item.addEventListener('click', () => {
+          items.forEach(item => item.classList.remove('active'))
+          item.classList.add('active')
+        })
+      })
+    </script>
+    <script src="../assets/js/click.js"></script>
+  </body>
+
+</html>
