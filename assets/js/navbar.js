@@ -3,6 +3,15 @@ navbar.style.background = "#27262e"
 
 navbar.innerHTML+=
 `
+<style>
+::-webkit-scrollbar {
+    display: none;
+}
+body {
+    user-select: none;
+    -webkit-user-select: none;
+}
+</style>
 <div class="container">
 <a class="navbar-brand d-flex align-items-center" href="index.html">
 <span class="d-flex justify-content-center align-items-center">

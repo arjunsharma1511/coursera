@@ -10,7 +10,7 @@ div, p, span {color: #fff;}
 }
 body {
     user-select: none;
-    --webkit-user-select: none;
+    -webkit-user-select: none;
 }
 </style>
 <div class="container-fluid">
