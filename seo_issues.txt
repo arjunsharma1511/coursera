@@ -1,0 +1,33 @@
+https://web-ex-technologies.systems and https://www.web-ex-technologies.systems should resolve to the same URL, but currently do not.
+HIGH
+The most common keywords of this webpage are not distributed across the important HTML tags! Primary keywords should appear in title tag, meta description and heading tags to help Search Engines to properly identify the topic of this webpage.
+HIGH
+This webpage is using render blocking resources! Eliminating render-blocking resources can help this webpage to load significantly faster and will improve the website experience for your visitors.
+HIGH
+This webpage is not serving images in a modern format! Image formats like JPEG 2000, JPEG XR, and WebP often provide better compression than PNG or JPEG, which means faster downloads and less data consumption.
+HIGH
+This webpage is not connected with social media using the API's provided by Facebook, Google +, Twitter, Pinterest, or using addthis.com
+HIGH
+This webpage is using "img" tags with empty or missing "alt" attribute!
+MEDIUM
+This website lacks a sitemap file! Sitemaps can help robots index your content more thoroughly and quickly. Read more on Google's guidelines for implementing the sitemap protocol.
+MEDIUM
+This website lacks a "robots.txt" file. This file can protect private content from appearing online, save bandwidth, and lower load time on your server. A missing "robots.txt" file also generates additional errors in your apache log whenever robots request one. Read more about the robots.txt file, and how to create one for your site.
+MEDIUM
+A Google Analytics script is not detected on this page. While there are several tools available to monitor your site's visitors and traffic sources, Google Analytics is a free, commonly recommended program to help diagnose potential SEO issues.
+MEDIUM
+Not all image display dimensions match the natural aspect ratio! Fix aspect ratio issues to avoid distorted images on this website!
+MEDIUM
+Not all images in this webpage are properly sized! This webpage is serving images that are larger than needed for the size of the user's viewport.
+LOW
+This webpage is using the canonical link tag. This tag specifies that the URL: https://Web-ex-technologies.system/ should be the preferred version of this page. The canonical tag can be useful when there are similar versions of the same content on several URLs (e.g., such as e-commerce sites where URL modifiers like sort parameters are appended to a product page's URL). Please ensure that this specification is correct, as canonical tags are often hard-coded and may not always reflect the latest changes in a site's URL structure.
+LOW
+We've found 1 email addresses in your page code! We advise you to protect email links in a way that hides them from the spam harvesters.
+LOW
+This webpage is not using the Strict-Transport-Security header! This is a security header that was created as a way to force the browser to use secure connections when a site is running over HTTPS.
+LOW
+This webpage is using images with large metadata (more than 16% of the image size)! Stripping out unnecessary metadata tags can improve not only the loading time but also the security and privacy of a webpage.
+LOW
+This webpage is using more than 20 http requests, which can slow down page loading and negatively impact user experience!
+LOW
+This webpage is using inline CSS styles!
