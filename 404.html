@@ -7,8 +7,34 @@
   <title>404 error</title>
     <link rel="shortcut icon" href="assets/icon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <style>
+      :root {
+        --src1: url(assets/img/cs1.jpg);
+        --src2: url(assets/img/products/s13.jpg);
+        --src3: url(assets/img/products/security10.jpg);
+        --src4: url(assets/img/products/security 8.jpg);
+        --src5: url(assets/img/products/security3.jpg);
+        --src6: url(assets/img/products/s15.jpg);
+      }
+      .oops {
+        --img: url(assets/img/cs1.jpg) repeat center;
+        font-size: 120px;
+        color: #000;
+        font-weight: bold;
+        background: var(--img);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 800;
+        -webkit-font-smoothing: antialiased;
+      }
+
+    </style>
   </head>
-<body>
+<body class="bg-black">
   <!--404page using bootstrap & css -->
   <div class="container text-center mt-5">
     <div class="row">
@@ -17,12 +43,12 @@
           <h1 class="oops text-uppercase">
             Oops!</h1>
           <h2 class="fff">
-            404 Not Found</h2>
-          <div class="error-details">
+            <span class="fw-bold text-danger">404</span> <span style="font-size: 10px;color: #37f713">Not Found</span></h2>
+          <div class="error-details text-info">
             Sorry, an error has occured, Requested page not found!
           </div>
           <div class="error-actions">
-            <a href="index.html" class="btn btn-primary btn-lg mt-5">
+            <a href="https://web-ex-technologies.system/" class="btn btn-primary btn-lg mt-5">
               <span class="glyphicon glyphicon-home"></span>Take Me Home </a>
           </div>
         </div>
